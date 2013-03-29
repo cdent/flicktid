@@ -38,9 +38,9 @@ The last two arguments are:
   created.
 
 If a photo has a title, that will be used as the tiddler title. If it
-does not, then the unique ID assigned by Flickr will be used. At this time
-no other metadata about the photo is gathered. This could probably be
-done without too much difficulty.
+does not, then the unique ID assigned by Flickr will be used. Tags will
+be mapped to the tiddler, if they exist. `datetaken` and `dateupload`
+fields will be set with unix time (seconds since the epoch) values.
 
 At the moment the Flickr set is assumed to be public. If there's demand
 Flickr auth could probably be added.
