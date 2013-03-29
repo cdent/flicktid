@@ -1,0 +1,51 @@
+# Introduction
+
+Proxy [Flickr](http://flickr.com) hosted photos into tiddlers
+on a [TiddlyWeb](http://tiddlyweb.com) sever.
+
+The created tiddlers operate as proxies that redirect to the
+original resource.
+
+This allows photos to be referenced as tiddlers: links made as
+tiddlers, messed about with with macros, etc.
+
+# Examples
+
+* http://csand.tiddlyspace.com/tiddlers.wiki#[[flicklinktest]]
+* http://csand.tiddlyspace.com/flicklinktest
+* http://csand.tiddlyspace.com/flicklinkmd
+* http://csiurana.tiddlyspace.com/ and
+  http://siurana-photos.tiddlyspace.com/tiddlers
+
+# How
+
+Install `flicktid` (instructions to be completed) and then run a command
+similar to:
+
+```
+flicktid -v \
+   --user=cdent \
+   --pass=xxxxxx \
+   72157633103289117 \
+   http://siurana-photos.tiddlyspace.com/bags/siurana-photos_public/tiddlers
+```
+
+The last two arguments are:
+
+* The ID associated with the Flickr set (look in the URL when
+  viewing the set's Flickr page).
+* The URL of the bag tiddlers where the proxy tiddlers are to be 
+  created.
+
+If a photo has a title, that will be used as the tiddler title. If it
+does not, then the unique ID assigned by Flickr will be used. At this time
+no other metadata about the photo is gathered. This could probably be
+done without too much difficulty.
+
+At the moment the Flickr set is assumed to be public. If there's demand
+Flickr auth could probably be added.
+
+# Who
+
+Created by Chris Dent, the author of TiddlyWeb, as a simple technology
+demonstration. Hopefully useful to someone.
